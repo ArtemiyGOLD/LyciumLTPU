@@ -7,7 +7,6 @@ body {
 
 .top-header {
     background-color: white;
-    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,13 +16,11 @@ body {
     left: 0;
     right: 0;
     height: 110px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
 .logo img {
-    max-height: 65px;
-    display: block;
+    max-height: 60px;
 }
 
 .top-nav {
@@ -40,7 +37,7 @@ body {
 }
 
 .top-nav li {
-    margin-left: 35px;
+    margin-left: 20px;
 }
 
 .top-nav a {
@@ -53,24 +50,19 @@ body {
     background-color: #28a745;
     color: white;
     padding: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 1px;
-    padding-bottom: 4px;
     border: none;
     border-radius: 5px;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
-    margin-left: 30px; /* Отступ от списка меню */
+    margin-left: 20px;
 }
-
 
 .sidebar {
     background-color: #28a745;
     color: white;
-    width: 200px;
+    width: 400px;
     position: fixed;
-    top: 110px; /* Сдвиг вниз на высоту шапки */
+    top: 110px;
     bottom: 0;
     padding: 20px 0;
 }
@@ -93,14 +85,50 @@ body {
 }
 
 .content {
-    margin-left: 200px; /* Сдвиг основного контента */
+    margin-left: 200px;
     padding: 80px 20px;
-    padding-top: 100px; /* Дополнительный отступ сверху для предотвращения наложения на шапку */
+    padding-top: 100px;
     background-color: #f8f9fa;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
-body {
-    overflow-x: hidden; /* Удаление горизонтальной прокрутки */
+.hidden {
+    display: none;
+}
+
+.sidebar {
+    background-color: #28a745;
+    color: white;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    padding: 20px 0;
+    left: -200px; /* Изначально скрыто слева */
+    transition: left 0.5s ease;
+}
+
+.sidebar.show {
+    left: 0; /* Появляется при активации */
+}
+
+
+.text-blocks {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    width: 250px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: none; /* Блоки скрыты изначально */
+}
+
+.welcome-message {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -19,9 +19,10 @@
                 <li><a href="#">Педагогический состав</a></li>
             </ul>
         </nav>
-        <button class="menu-button">☰</button>
+        <button class="menu-button" onclick="toggleSidebar()">☰</button>
     </header>
-    <aside class="sidebar">
+
+    <aside class="sidebar hidden" id="sidebar">
         <ul>
             <li><a href="#">Текст</a></li>
             <li><a href="#">Текст</a></li>
@@ -29,8 +30,15 @@
             <li><a href="#">Текст</a></li>
         </ul>
     </aside>
+
     <main class="content">
         <!-- Основной контент -->
     </main>
+
+    <div class="welcome-message">
+        <p>Слово директора школы.</p>
+    </div>
+    
+    <script src="src/script.js"></script>
 </body>
 </html>
