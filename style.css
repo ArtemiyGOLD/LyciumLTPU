@@ -77,22 +77,33 @@ body {
 
 /* Плавная анимация */
 .sidebar {
-    background-color: #28a745;
-    color: white;
     width: 200px;
     position: fixed;
-    top: 110px;
-    bottom: 0;
-    padding: 20px;
     left: -200px; /* Изначально скрыто */
     transition: left 0.5s ease, opacity 0.5s ease;
     opacity: 0; /* Прозрачность для плавного исчезновения */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+#greenSidebar {
+    background-color: #28a745;
+    color: white;
+    top: 110px;
+    height: calc(50% - 55px); /* Высота для плотного прилегания */
+}
+
+#blackSidebar {
+    background-color: #000000;
+    color: white;
+    top: calc(50% + 55px); /* Сдвиг вниз от середины */
+    height: calc(50% - 55px); /* Высота для плотного прилегания */
 }
 
 .sidebar.show {
     left: 0; /* Появление */
     opacity: 1; /* Видимость */
 }
+
 
 .hidden {
     display: none;
