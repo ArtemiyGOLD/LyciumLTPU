@@ -25,7 +25,6 @@ body {
 
 .top-nav {
     margin-left: auto;
-    margin-right: 30px;
     display: flex;
     align-items: center;
 }
@@ -50,10 +49,7 @@ body {
 .menu-button {
     background-color: #28a745;
     color: white;
-    padding-left: 9px;
-    padding-right: 9px;
-    padding-top: 1px;
-    padding-bottom: 4px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 25px;
@@ -61,78 +57,51 @@ body {
     margin-left: 20px;
 }
 
-.sidebar {
-    background-color: #28a745;
-    color: white;
-    width: 400px;
-    position: fixed;
-    top: 110px;
-    bottom: 0;
-    padding: 20px 0;
-}
-
+/* Исправление списка */
 .sidebar ul {
-    list-style-type: none;
+    list-style-type: none; /* Убираем кружочки */
     padding: 0;
     margin: 0;
 }
 
 .sidebar li {
-    margin: 30px 0;
+    margin: 20px 0;
     text-align: center;
+    font-weight: bold; /* Сделаем текст жирным */
 }
 
 .sidebar a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
 }
 
-.content {
-    margin-left: 200px;
-    padding: 80px 20px;
-    padding-top: 100px;
-    background-color: #f8f9fa;
-    min-height: 100vh;
+/* Плавная анимация */
+.sidebar {
+    background-color: #28a745;
+    color: white;
+    width: 200px;
+    position: fixed;
+    top: 110px;
+    bottom: 0;
+    padding: 20px;
+    left: -200px; /* Изначально скрыто */
+    transition: left 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* Прозрачность для плавного исчезновения */
+}
+
+.sidebar.show {
+    left: 0; /* Появление */
+    opacity: 1; /* Видимость */
 }
 
 .hidden {
     display: none;
 }
 
-.sidebar {
-    background-color: #28a745;
-    color: white;
-    width: 200px;
-    position: fixed;
-    top: 60px;
-    bottom: 0;
-    padding: 20px 0;
-    left: -200px; /* Изначально скрыто слева */
-    transition: left 0.5s ease;
-}
-
-.sidebar.show {
-    left: 0; /* Появляется при активации */
-}
-
-
-.text-blocks {
-    position: fixed;
-    left: 0;
-    top: 20%;
-    width: 250px;
-    background-color: #f1f1f1;
-    padding: 20px;
-    display: none; /* Блоки скрыты изначально */
-}
 
 .welcome-message {
-    position: fixed;
-    left: 0;
-    top: 20%;
-    width: 250px;
-    background-color: #f8f9fa;
+    margin-top: 120px;
     padding: 20px;
+    background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
