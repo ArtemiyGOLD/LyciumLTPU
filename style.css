@@ -49,10 +49,10 @@ body {
 .menu-button {
     background-color: #28a745;
     color: white;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
     padding-top: 1px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     border: none;
     border-radius: 5px;
     font-size: 20px;
