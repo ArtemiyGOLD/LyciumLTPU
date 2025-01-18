@@ -9,7 +9,7 @@ function toggleSidebar() {
         setTimeout(() => {
             greenSidebar.classList.add('hidden');
             blackSidebar.classList.add('hidden');
-        }, 500);
+        }, 500); // Убираем после завершения анимации
         welcomeMessage.style.display = 'block';
     } else {
         greenSidebar.classList.remove('hidden');
@@ -17,7 +17,7 @@ function toggleSidebar() {
         setTimeout(() => {
             greenSidebar.classList.add('show');
             blackSidebar.classList.add('show');
-        }, 10);
+        }, 10); // Появление после задержки
         welcomeMessage.style.display = 'none';
     }
 }

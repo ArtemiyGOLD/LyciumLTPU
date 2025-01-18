@@ -1,8 +1,22 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
+    position: relative; /* Убедимся, что тело страницы имеет позиционирование */
+}
+
+/* Полупрозрачное изображение внизу справа */
+.background-overlay {
+    position: fixed;
+    bottom: -30px; /* Отступ снизу */
+    right: -30px; /* Отступ справа */
+    width: 500px; /* Увеличенная ширина изображения */
+    height: 500px; /* Увеличенная высота изображения */
+    background-image: url('Image/background.jpg'); /* Укажите путь к вашему изображению */
+    background-size: contain; /* Масштабирование изображения */
+    background-repeat: no-repeat; /* Без повторения */
+    opacity: 0.5; /* Полупрозрачность */
+    pointer-events: none; /* Игнорировать клики */
+    z-index: 0; /* На заднем плане */
 }
 
 .top-header {
@@ -16,7 +30,7 @@ body {
     left: 0;
     right: 0;
     height: 110px;
-    z-index: 1;
+    z-index: 1000; /* Высокий z-index для шапки */
 }
 
 .logo img {
@@ -62,6 +76,7 @@ body {
     list-style-type: none; /* Убираем кружочки */
     padding: 0;
     margin: 0;
+    font-size: 15pt;
 }
 
 .sidebar li {
@@ -75,43 +90,49 @@ body {
     color: white;
 }
 
+/* Основной контент поверх изображения */
+.content {
+    position: relative;
+    z-index: 1; /* Поверх изображения */
+    margin-top: 120px; /* Отступ для шапки */
+    padding: 20px;
+}
+
 /* Плавная анимация */
 .sidebar {
-    width: 200px;
+    width: 300px;
     position: fixed;
     left: -200px; /* Изначально скрыто */
     transition: left 0.5s ease, opacity 0.5s ease;
-    opacity: 0; /* Прозрачность для плавного исчезновения */
-    padding: 0; /* Убираем внутренние отступы */
+    opacity: 0; /* Изначально скрыто */
+    padding: 0;
 }
 
 #greenSidebar {
     background-color: #28a745;
     color: white;
-    top: 110px;
-    height: calc(50% - 55px); /* Высота для плотного прилегания */
+    top: 110px; /* Начинается под шапкой */
+    height: 60%; /* Увеличиваем высоту зеленого блока до 60% */
 }
 
 #blackSidebar {
     background-color: #000000;
     color: white;
-    top: calc(50% + 55px); /* Сдвиг вниз от середины */
-    height: calc(50% - 55px); /* Высота для плотного прилегания */
+    top: calc(60% + 110px); /* Сдвигаем черный блок ниже зеленого */
+    height: 40%; /* Уменьшаем высоту черного блока до 40% */
 }
 
+
 .sidebar.show {
-    left: 0; /* Появление */
+    left: 0; /* Показывается */
     opacity: 1; /* Видимость */
 }
 
-
 .hidden {
-    display: none;
+    display: none; /* Полное скрытие */
 }
 
-
 .welcome-message {
-    margin-top: 120px;
     padding: 20px;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
