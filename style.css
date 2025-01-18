@@ -3,7 +3,9 @@ body {
     font-family: 'Arial', sans-serif;
     position: relative; /* Убедимся, что тело страницы имеет позиционирование */
 }
-
+p1{
+    font-size: 17pt;
+}
 /* Полупрозрачное изображение внизу справа */
 .background-overlay {
     position: fixed;
@@ -70,9 +72,9 @@ body {
     font-size: 27px;
     cursor: pointer;
     margin-left: 20px;
-    transition: font-size 0.6s ease, 
-                border-radius 0.6s ease, 
-                background-color 0.6s ease;
+    transition: font-size 0.9s ease, 
+                border-radius 0.9s ease, 
+                background-color 0.9s ease;
 }
 .menu-button:hover {
     font-size: 28px;
@@ -121,14 +123,14 @@ body {
     background-color: #28a745;
     color: white;
     top: 110px; /* Начинается под шапкой */
-    height: 60%; /* Увеличиваем высоту зеленого блока до 60% */
+    height: 50%; /* Увеличиваем высоту зеленого блока до 60% */
 }
 
 #blackSidebar {
     background-color: #000000;
     color: white;
-    top: calc(60% + 110px); /* Сдвигаем черный блок ниже зеленого */
-    height: 40%; /* Уменьшаем высоту черного блока до 40% */
+    top: calc(50% + 110px); /* Сдвигаем черный блок ниже зеленого */
+    height: 50%; /* Уменьшаем высоту черного блока до 40% */
 }
 
 
