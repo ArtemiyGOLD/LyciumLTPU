@@ -139,12 +139,14 @@ hr {
 
 #greenSidebar ul li a {
   display: block;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease,
+              font-size 0.3s ease;
   padding: 3px;
 }
 
 #greenSidebar ul li a:hover {
-  background-color: #008820; /* Цвет фона при наведении */
+  background-color: #008f21; /* Цвет фона при наведении */
+  font-size: 16pt;
 }
 
 #greenSidebar ul {
