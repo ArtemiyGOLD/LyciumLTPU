@@ -5,6 +5,7 @@ body {
 }
 p1{
     font-size: 17pt;
+    margin-bottom: 25px;
 }
 /* Полупрозрачное изображение внизу справа */
 .background-overlay {
@@ -101,6 +102,8 @@ hr {
     margin: 20px 0;
     text-align: center;
     font-weight: bold; /* Сделаем текст жирным */
+    font-size: 10pt;
+    margin-bottom: 15px;
 }
 
 .sidebar a {
