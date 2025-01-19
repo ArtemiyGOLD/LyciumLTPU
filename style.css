@@ -1,160 +1,178 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    position: relative; /* Убедимся, что тело страницы имеет позиционирование */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  position: relative; /* Убедимся, что тело страницы имеет позиционирование */
 }
-p1{
-    font-size: 17pt;
-    margin-bottom: 25px;
+p1 {
+  font-size: 17pt;
+  margin-bottom: 25px;
 }
 /* Полупрозрачное изображение внизу справа */
 .background-overlay {
-    position: fixed;
-    bottom: -50px; /* Отступ снизу */
-    right: -35px; /* Отступ справа */
-    width: 600px; /* Увеличенная ширина изображения */
-    height: 600px; /* Увеличенная высота изображения */
-    background-image: url('Image/background.gif'); /* Укажите путь к вашему изображению */
-    background-size: contain; /* Масштабирование изображения */
-    background-repeat: no-repeat; /* Без повторения */
-    opacity: 0.5; /* Полупрозрачность */
-    pointer-events: none; /* Игнорировать клики */
-    z-index: 0; /* На заднем плане */
+  position: fixed;
+  bottom: -50px; /* Отступ снизу */
+  right: -35px; /* Отступ справа */
+  width: 600px; /* Увеличенная ширина изображения */
+  height: 600px; /* Увеличенная высота изображения */
+  background-image: url("Image/background.gif"); /* Укажите путь к вашему изображению */
+  background-size: contain; /* Масштабирование изображения */
+  background-repeat: no-repeat; /* Без повторения */
+  opacity: 0.5; /* Полупрозрачность */
+  pointer-events: none; /* Игнорировать клики */
+  z-index: 0; /* На заднем плане */
 }
 
 .top-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 110px;
-    z-index: 1000; /* Высокий z-index для шапки */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  z-index: 1000; /* Высокий z-index для шапки */
 }
 
 .logo img {
-    max-height: 60px;
+  max-height: 60px;
 }
 
 .top-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .top-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .top-nav li {
-    margin-left: 20px;
-    margin-right: 15px;
+  margin-left: 20px;
+  margin-right: 15px;
 }
 
 .top-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .menu-button {
-    background-color: #28a745;
-    color: white;
-    padding: 1px 7px 4px 7px;
-    border: none;
-    border-radius: 5px;
-    font-size: 27px;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: font-size 0.9s ease, 
-                border-radius 0.9s ease, 
-                background-color 0.9s ease;
+  background-color: #28a745;
+  color: white;
+  padding: 1px 7px 4px 7px;
+  border: none;
+  border-radius: 5px;
+  font-size: 27px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: font-size 0.9s ease, border-radius 0.9s ease,
+    background-color 0.9s ease;
 }
 .menu-button:hover {
-    font-size: 28px;
-    border-radius: 8px;
-    background-color:#17a512 ;
+  font-size: 28px;
+  border-radius: 8px;
+  background-color: #17a512;
 }
 
 hr {
-    border: none; /* Убираем границу */
-    background-color: rgb(0, 0, 0); /* Цвет линии */
-    color: rgb(0, 0, 0); /* Цвет линии для IE6-7 */
-    height: 2px; /* Толщина линии */
-   }
+  border: none; /* Убираем границу */
+  background-color: rgb(0, 0, 0); /* Цвет линии */
+  color: rgb(0, 0, 0); /* Цвет линии для IE6-7 */
+  height: 2px; /* Толщина линии */
+}
 
 /* Исправление списка */
 .sidebar ul {
-    list-style-type: none; /* Убираем кружочки */
-    padding: 0;
-    margin: 0;
-    font-size: 15pt;
+  list-style-type: none; /* Убираем кружочки */
+  padding: 0;
+  margin: 0;
+  font-size: 15pt;
 }
 
 .sidebar li {
-    margin: 20px 0;
-    text-align: center;
-    font-weight: bold; /* Сделаем текст жирным */
-    font-size: 10pt;
-    margin-bottom: 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bold; /* Сделаем текст жирным */
+  font-size: 10pt;
+  margin-bottom: 15px;
 }
 
 .sidebar a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15pt;
 }
 
 /* Основной контент поверх изображения */
 .content {
-    position: relative;
-    z-index: 1; /* Поверх изображения */
-    margin-top: 120px; /* Отступ для шапки */
-    padding: 20px;
+  position: relative;
+  z-index: 1; /* Поверх изображения */
+  margin-top: 120px; /* Отступ для шапки */
+  padding: 20px;
 }
 
 /* Плавная анимация */
 .sidebar {
-    width: 250px;
-    position: fixed;
-    left: -200px; /* Изначально скрыто */
-    transition: left 0.5s ease, opacity 0.5s ease;
-    opacity: 0; /* Изначально скрыто */
-    padding: 0;
+  width: 310px;
+  position: fixed;
+  left: -200px; /* Изначально скрыто */
+  transition: left 0.5s ease, opacity 0.5s ease;
+  opacity: 0; /* Изначально скрыто */
+  padding: 0;
 }
 
 #greenSidebar {
-    background-color: #28a745;
-    color: white;
-    top: 110px; /* Начинается под шапкой */
-    height: 50%; /* Увеличиваем высоту зеленого блока до 60% */
+  background-color: #28a745;
+  color: white;
+  top: 110px; /* Начинается под шапкой */
+  height: 50%; /* Увеличиваем высоту зеленого блока до 60% */
+}
+
+#greenSidebar ul li a {
+  display: block;
+  transition: background-color 0.3s ease;
+  padding: 3px;
+}
+
+#greenSidebar ul li a:hover {
+  background-color: #008820; /* Цвет фона при наведении */
+}
+
+#greenSidebar ul {
+  line-height: 1.75;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #blackSidebar {
-    background-color: #000000;
-    color: white;
-    top: calc(50% + 110px); /* Сдвигаем черный блок ниже зеленого */
-    height: 50%; /* Уменьшаем высоту черного блока до 40% */
+  background-color: #000000;
+  color: white;
+  top: calc(50% + 110px); /* Сдвигаем черный блок ниже зеленого */
+  height: 50%; /* Уменьшаем высоту черного блока до 40% */
 }
 
-
 .sidebar.show {
-    left: 0; /* Показывается */
-    opacity: 1; /* Видимость */
+  left: 0; /* Показывается */
+  opacity: 1; /* Видимость */
 }
 
 .hidden {
-    display: none; /* Полное скрытие */
+  display: none; /* Полное скрытие */
 }
 
 .welcome-message {
-    padding: 20px;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

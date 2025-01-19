@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лицей при ТПУ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="background-overlay"></div>
     <header class="top-header">
-        <div class="logo">
-            <img src="Image/logoLTPU.jpg" alt="Лицей при ТПУ">
-        </div>
-        <nav class="top-nav">
-            <ul>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Поступающим</a></li>
-                <li><a href="#">Достижения Лицеистов</a></li>
-                <li><a href="#">Педагогический состав</a></li>
-            </ul>
-        </nav>
-        <button class="menu-button" onclick="toggleSidebar()">☰</button>
-    </header>
-    
-    <aside class="sidebar" id="greenSidebar">
+      <div class="logo">
+        <img src="Image/logoLTPU.jpg" alt="Лицей при ТПУ" />
+      </div>
+      <nav class="top-nav">
         <ul>
-            <li><a>ᅟ</a></li>
-            <li><a href="#"><p1>Текст</p1></a></li>
-            <li><a href="#"><p1>Текст</p1></a></li>
-            <li><a href="#"><p1>Текст</p1></a></li>
-            <li><a href="#"><p1>Текст</p1></a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Поступающим</a></li>
+          <li><a href="#">Достижения Лицеистов</a></li>
+          <li><a href="#">Педагогический состав</a></li>
         </ul>
-    </aside>
-    
-    <aside class="sidebar black" id="blackSidebar">
+      </nav>
+      <button class="menu-button" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <aside class="sidebar" id="greenSidebar">
+      <ul>
+        <a>ᅟ</a>
+        <li>
+          <a href="#">Направления подготовки</a>
+        </li>
+        <li>
+          <a href="#">Учебный процесс</a>
+        </li>
+        <li>
+          <a href="#">Внеучебная жизнь</a>
+        </li>
+        <li>
+          <a href="#">Контакты</p1></a>
+        </li>
+      </ul>
     </aside>
 
+    <aside class="sidebar black" id="blackSidebar"></aside>
+
     <main class="content">
-        <div class="welcome-message">
-            <div><p>Слово директора школы.</p>
-            <a>"Желаю всем учиться как альмаметов!"</a></div>
-            
+      <div class="welcome-message">
+        <div>
+          <p>Слово директора школы.</p>
+          <a>"Желаю всем учиться как альмаметов!"</a>
         </div>
-        <!-- Основной контент -->
+      </div>
+      <!-- Основной контент -->
     </main>
 
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>
